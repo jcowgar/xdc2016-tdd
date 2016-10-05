@@ -205,8 +205,10 @@ End
 		Sub Action()
 		  dim upTo as integer = Val(FizzBuzzToTextField.Text)
 		  
+		  NumbersListbox.DeleteAllRows
+		  
 		  for i as integer = 1 to upTo
-		    // Add FizzBuzz call here
+		    NumbersListbox.AddRow FizzBuzz.ToText(i)
 		  next
 		  
 		End Sub
